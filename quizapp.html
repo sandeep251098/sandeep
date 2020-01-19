@@ -1,0 +1,109 @@
+<HTML>
+  <HEAD>
+    <STYLE>
+       #slid-box{
+	        margin:auto;
+	        border:3px solid black;
+	        height:200px;
+	        width:600px;
+	        position:relative;
+                                }
+        .slide{
+	        height:100%;
+	        width:100%;
+	         border:1px solid red;
+		dispaly:inline-block;
+		position:absolute;
+		text-align:center;
+		color:white;
+		font-size:24px;
+                                     dispaly:inline-block;
+	           }
+          #btn1,#btn2{
+	         height:50px;
+		width:100px;
+		color:#ffffff;
+		font-size:26px;
+	           }
+		  #btn1{
+		       outline:none;
+		       border-radius:10px;
+		       margin-left:600;
+		       background:red;
+		       cursor:pointer;
+                    }
+		  #btn2{
+		    outline:none;
+		    border-radius:10px;
+		    background:green;
+		    cursor:pointer;
+		  }
+	  input [type="radio"]{
+		  height:20px;
+		  width:30px;
+		  cousor:pointer;
+		    }
+	 p{
+	     text-align:center;
+	     font-size:36px;
+	     text-decoration:underline;
+	     color:#000033;
+		 }
+      </STYLE>
+        <SCRIPT>
+             var slidNo=0;
+	      var slid=document.getElementsByClassName("slide");
+	               function slider(){
+			      for(var i=0; i<slid.length; i++){
+				  slid[i].style.display="none";    
+			      }
+			      slid[slidNo].style.display="block";
+			      slidNo++;
+			      if(slidNo==5)
+			          slidNo=0;
+				 }
+                                                         </SCRIPT>
+     </HEAD>
+	  <BODY>
+	    <P>Some Quiz Questions</P>
+	    <DIV ID="slid-box">
+	      <SPAN CLASS="slide" STYLE="background:black;">
+	         what numaric values are used for the font-weight property?<BR/>
+		<INPUT TYPE="radio" CLASS="option" ID="option" />1000-9000.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>1-10.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>10-90.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>100-900.
+                 </SPAN>
+	        <SPAN CLASS="slide" STYLE="background:pink;">
+	           How many types of selector?<BR/>
+		<INPUT TYPE="radio" CLASS="option" id="s" NAME="s"/>5
+		<INPUT TYPE="radio" CLASS="option" id="s" NAME="s"/>2
+		<INPUT TYPE="radio" CLASS="option"id="s" NAME="s"/>3
+		<INPUT TYPE="radio" CLASS="option" id="s" NAME="s"/>6
+                 </SPAN>
+	        <SPAN CLASS="slide" STYLE="background:green;">
+	          How many way of css?<BR/>
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>2
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>4
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>3
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>8
+                 </SPAN>
+	        <SPAN CLASS="slide" STYLE="background:skyblue;">
+	           why use css?<BR/>
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>the web page's brouser independent.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>unique web page.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>the saparation of style and containt.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>responsive web page.
+                 </SPAN>
+	        <SPAN CLASS="slide" STYLE="background:aqua;">
+	           which css property is used for bolder the text?<BR/>
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>font-size.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>font-variant.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>font-weight.
+		<INPUT TYPE="radio" CLASS="option" ID="option"/>font.style.
+                 </SPAN>
+	    </DIV>
+	    <BUTTON ID="btn1">Cencel</BUTTON>
+	    <BUTTON ID="btn2" onClick="slider();">Next</BUTTON>
+  </BODY>
+</HTML>
