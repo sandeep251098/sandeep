@@ -1,0 +1,52 @@
+<h4><HTML>
+  <HEAD>
+   <STYLE>
+      .container{
+             height:300px;
+             width:200px;
+             border:1px solid sliver;
+	    box-shadow:2px 3px red;
+             position:relative;
+	    background:radial-gradient(yellow ,aqua, blue);
+	    transition:2s cubic-bezier(0,1,0,1.0,0,1) 2s;
+	      }
+        img{
+             height:100%;
+             width:100%;
+              position:absolute;
+            }
+       .inner{
+           width:100%;
+          position:absolute;
+          background:linear-gradient(to top,red,black);
+          color:white;
+	 bottom:0px;
+	 height:0px;
+	 display:none; 
+          text-align:center;
+          transition:all 2s esae 2s;
+        }
+    .container:hover .inner{
+       display:block;
+       height:100px;
+            
+    }
+    h1 a img{
+      height:20px;
+      width:20px;
+      position:absolute;
+      left:10px;
+      top:30px;
+     }
+   </STYLE>
+  </HEAD>
+ <BODY>
+   <DIV CLASS="container">
+    <!..<img src="a.jpg"/>
+    <DIV CLASS="inner">
+     <H1><A HREF="#"><IMG SRC="logo.png"></A>Sandeep</H1>
+     <P>Full Stake Developer</P>
+  </DIV>
+  </DIV>
+ </BODY>
+</HTML></h4>
